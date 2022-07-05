@@ -1,0 +1,20 @@
+{
+  "name": "codingapple-node.js.mongodb-2022-0629-classnote-c42",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IG-Kim2511/codingapple-Node.js.MongoDB-2022-0629-classnote-c42.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IG-Kim2511/codingapple-Node.js.MongoDB-2022-0629-classnote-c42/issues"
+  },
+  "homepage": "https://github.com/IG-Kim2511/codingapple-Node.js.MongoDB-2022-0629-classnote-c42#readme"
+}
