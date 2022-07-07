@@ -131,14 +131,12 @@ MongoClient.connect(uri, function(에러, p_client){
 
 
 
-// 🦄🦄42 AJAX로 DELETE 요청하기 1, $.ajax(.), app.delete('delete',(.)={})
+// 🦄🦄42 AJAX로 DELETE 요청하기1, $.ajax(.), app.delete('delete',(.)={})
 console.log('🦄🦄c42')
-
-// ./view/list.jes
-
-
 // 🦄🦄44 AJAX로 DELETE 요청하기2, deleteOne(.), parseInt(.), data-id, .dataset.id
 console.log('🦄🦄c44')
-
 // 🦄🦄46 AJAX로 DELETE 요청하기3, jQuery기능 .send .status .sendFile .render .json(~)
 console.log('🦄🦄c46')
+
+// 👉./views/list.ejs
+
