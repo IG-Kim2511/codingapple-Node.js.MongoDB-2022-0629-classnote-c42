@@ -136,7 +136,7 @@ MongoClient.connect(uri, function(에러, p_client){
 
     //c44) 🍄req요청.body에 담겨온 id를 가진 오브젝트를 db에서 찾아서, 삭제
     // 👉./views/list.ejs
-    app.delete('/delete',function (req요청,res) {
+    app.delete('/delete',function (req요청,res응답) {
 
       // 😎console.log("c42,44,46"+ req.body) 이렇게 하면 에러남. (이유는 모름)
       console.log(req요청.body)
@@ -153,6 +153,10 @@ MongoClient.connect(uri, function(에러, p_client){
         console.log(err)
         console.log('c44 delete Finished')
         
+
+        // c46. status(200).send({message : "c46, success"});
+        res응답.status(200).send({message : "c46, success"});
+
       });
       
     });

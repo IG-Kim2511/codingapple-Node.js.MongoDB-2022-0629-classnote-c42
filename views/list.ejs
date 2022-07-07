@@ -99,6 +99,9 @@
    
   // 🍀44-40) 버튼클릭 & 실행  👉html
    $('.delete').click(function (e) {   
+
+    // 🍀46-20) this : 지금 클릭한 것
+    var thisClicked= $(this);
        
       //  ajax요청시, /delete서버에 {_id:1}정보 보내줌
       $.ajax({
@@ -110,14 +113,18 @@
           data:{_id : e.target.dataset.id}    
         })
         .done(function( msg결과 ) {
-          // alert( "Data Saved: " + msg결과 );
+          console.log('c44. delete-success')
           // 46)
           /* 
             w1 : page 강제 새로고침   -->  location.reload()
-            w2 : 삭제버튼 클릭한 div를 제거 or 안보이게함
-          
+            w2 : 삭제버튼 클릭한 div를 제거 or 안보이게함          
           */
+
+          // 46-20).parent('div').fadeOut();
+          thisClicked.parent('div').fadeOut();
         }).fail(function () {
+
+          console.log('c44, delete-fail')
           
         });
    })
