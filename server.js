@@ -129,33 +129,44 @@ MongoClient.connect(uri, function(에러, p_client){
 
 
 
+    // 🦄🦄42 AJAX로 DELETE 요청하기1, $.ajax(.), app.delete('delete',(.)={})
+    // 🦄🦄44 AJAX로 DELETE 요청하기2, deleteOne(.), parseInt(.), data-id, .dataset.id
+    // 🦄🦄46 AJAX로 DELETE 요청하기3, jQuery기능 .send .status .sendFile .render .json(~)
+    console.log('🦄🦄c42,44,46')
+
+    //c44) 🍄req요청.body에 담겨온 id를 가진 오브젝트를 db에서 찾아서, 삭제
+    // 👉./views/list.ejs
+    app.delete('/delete',function (req요청,res) {
+
+      // 😎console.log("c42,44,46"+ req.body) 이렇게 하면 에러남. (이유는 모름)
+      console.log(req요청.body)
+      console.log(req요청.body._id)
+
+      /* "req요청.body.~id"를 number로 바꿈
+      -> "req요청.body"를 deleteOne()에 사용함. 
+      ("req요청.body._id"  가 아니라. "req요청.body") */
+      req요청.body._id = parseInt(req요청.body._id);
+
+      // ~.deleteOne()
+      db.collection('ig_collection').deleteOne(req요청.body,function (err,obj결과) {
+        console.log(err)
+        console.log('c44 finished delete')
+        
+      });
+      
+    });
 
 
 
 
 
-    
+
 })
 
 // // 🌊 실습코드 끝------
 
 
 
-// 🦄🦄42 AJAX로 DELETE 요청하기1, $.ajax(.), app.delete('delete',(.)={})
-// 🦄🦄44 AJAX로 DELETE 요청하기2, deleteOne(.), parseInt(.), data-id, .dataset.id
-// 🦄🦄46 AJAX로 DELETE 요청하기3, jQuery기능 .send .status .sendFile .render .json(~)
-console.log('🦄🦄c42,44,46')
-
-//c44) 🍄req.body에 담겨온 id를 가진 오브젝트를 db에서 찾아서, 삭제
-// 👉./views/list.ejs
-app.delete('/delete',function (req,res) {
-
-  // 😎console.log("c42,44,46"+ req.body) 이렇게 하면 에러남. (이유는 모름)
-  console.log(req.body)
-
-  db.collection().deleteOne();
-  
-});
 
 
 

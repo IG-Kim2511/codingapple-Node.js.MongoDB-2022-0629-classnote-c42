@@ -82,6 +82,7 @@
             -->
             <%    for (let i = 0; i < ig_posts.length; i++) {   %>  
               <div class="list">
+                <p>_id: <%= ig_posts[i]._id  %>  </p>
                 <h4>할일 제목 : <%= ig_posts[i].제목 %></h4>
                 <p>할일 마감날짜 : <%= ig_posts[i].날짜 %></p>      
                 <button class="myBtn">삭제</button>
@@ -99,7 +100,7 @@
       $.ajax({
         method: "DELETE",
         url: "/delete",
-        data: { _id : 2}
+        data: { _id : 0}      //👉server.js , req.body
       })
         .done(function( msg결과 ) {
           // alert( "Data Saved: " + msg결과 );
