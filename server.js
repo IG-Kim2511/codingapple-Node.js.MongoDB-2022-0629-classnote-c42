@@ -130,8 +130,8 @@ MongoClient.connect(uri, function(에러, p_client){
 
 
     // 🦄🦄42 AJAX로 DELETE 요청하기1, $.ajax(.), app.delete('delete',(.)={})
-    // 🦄🦄44 AJAX로 DELETE 요청하기2, deleteOne(.), parseInt(.), data-id, .dataset.id
-    // 🦄🦄46 AJAX로 DELETE 요청하기3, jQuery기능 .send .status .sendFile .render .json(~)
+    // 🦄🦄44 AJAX로 DELETE 요청하기2, deleteOne(.), data-~~, .dataset.~~, parseInt(.)
+    // 🦄🦄46 AJAX로 DELETE 요청하기3, jQuery기능 .status(200).send()
     console.log('🦄🦄c42,44,46')
 
     //c44) 🍄req요청.body에 담겨온 id를 가진 오브젝트를 db에서 찾아서, 삭제
