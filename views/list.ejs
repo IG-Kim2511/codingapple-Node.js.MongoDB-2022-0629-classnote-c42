@@ -86,7 +86,7 @@
                 <h4>할일 제목 : <%= ig_posts[i].제목 %></h4>
                 <p>할일 마감날짜 : <%= ig_posts[i].날짜 %></p>      
 
-                <!-- 44-40), 44-50) -->
+                <!-- 44-40), 44-50) data-id="<%= ig_posts[i]._id %>-->
                 <button class="myBtn delete" data-id="<%= ig_posts[i]._id %>">삭제</button>
               </div>
             <%  }  %> 
@@ -106,11 +106,12 @@
           url: "/delete",
           // data: { _id : 7}      //👉server.js , req.body
 
-          //🍀44-50. e.target.dataset.id : 클릭한 버튼에 숨겨진 data-id갑 가져오기
+          //🍀44-50. e.target.dataset.id : 클릭한 버튼에 숨겨진 data-id값 가져오기
           data:{_id : e.target.dataset.id}    
         })
         .done(function( msg결과 ) {
           // alert( "Data Saved: " + msg결과 );
+          // 46)
         });
    })
 
