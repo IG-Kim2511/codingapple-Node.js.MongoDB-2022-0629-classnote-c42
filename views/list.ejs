@@ -89,5 +89,23 @@
             <%  }  %> 
         </div>
     </section>
+
+    <!-- 🦄🦄c42,44,46, AJAX로 DELETE 요청하기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+   
+   
+  //  ajax요청시, /delete서버에 {_id:1}정보 보내줌
+      $.ajax({
+        method: "DELETE",
+        url: "/delete",
+        data: { _id : 2}
+      })
+        .done(function( msg결과 ) {
+          // alert( "Data Saved: " + msg결과 );
+        });
+
+
+    </script>
   </body>
 </html>

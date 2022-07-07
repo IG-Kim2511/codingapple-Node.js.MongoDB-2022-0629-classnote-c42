@@ -114,17 +114,27 @@ MongoClient.connect(uri, function(에러, p_client){
     // 🦄32-2. ejs문법  (list탭 확인)
     // 👉views/list.ejs 생성
     
-    app.get('/list',function(res,req){      //34-4)
+    app.get('/list',function(req,res){      //34-4)
 
         // // .find().toArray() 
-        db.collection('ig_collection').find().toArray(function(p_err, p_db결과){   //34-2)
-    
-        console.log(p_db결과)
-    
-        // render() , list.ejs , ig_posts : p_db결과
-        req.render('list.ejs', { ig_posts : p_db결과 })     //34-4)  36-4)
+        db.collection('ig_collection').find().toArray(function(p_err, p_db결과){   //34-2)    
+          console.log(p_db결과)
+      
+          // render() , list.ejs , ig_posts : p_db결과
+          res.render('list.ejs', { ig_posts : p_db결과 })     //34-4)  36-4)
         })
     });
+
+
+
+
+
+
+
+
+
+
+    
 })
 
 // // 🌊 실습코드 끝------
@@ -132,11 +142,21 @@ MongoClient.connect(uri, function(에러, p_client){
 
 
 // 🦄🦄42 AJAX로 DELETE 요청하기1, $.ajax(.), app.delete('delete',(.)={})
-console.log('🦄🦄c42')
 // 🦄🦄44 AJAX로 DELETE 요청하기2, deleteOne(.), parseInt(.), data-id, .dataset.id
-console.log('🦄🦄c44')
 // 🦄🦄46 AJAX로 DELETE 요청하기3, jQuery기능 .send .status .sendFile .render .json(~)
-console.log('🦄🦄c46')
+console.log('🦄🦄c42,44,46')
 
+//c44) 🍄req.body에 담겨온 id를 가진 오브젝트를 db에서 찾아서, 삭제
 // 👉./views/list.ejs
+app.delete('/delete',function (req,res) {
+
+  // 😎console.log("c42,44,46"+ req.body) 이렇게 하면 에러남. (이유는 모름)
+  console.log(req.body)
+
+  db.collection().deleteOne();
+  
+});
+
+
+
 
