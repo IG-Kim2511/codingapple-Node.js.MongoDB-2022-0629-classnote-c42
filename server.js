@@ -142,15 +142,16 @@ MongoClient.connect(uri, function(에러, p_client){
       console.log(req요청.body)
       console.log(req요청.body._id)
 
-      /* "req요청.body.~id"를 number로 바꿈
-      -> "req요청.body"를 deleteOne()에 사용함. 
-      ("req요청.body._id"  가 아니라. "req요청.body") */
+      /*
+       "req요청.body.~id"를 number로 바꿈  -> "req요청.body"를 deleteOne()에 사용함. 
+        ("req요청.body._id"  가 아니라. "req요청.body") 
+      */
       req요청.body._id = parseInt(req요청.body._id);
 
       // ~.deleteOne()
       db.collection('ig_collection').deleteOne(req요청.body,function (err,obj결과) {
         console.log(err)
-        console.log('c44 finished delete')
+        console.log('c44 delete Finished')
         
       });
       
