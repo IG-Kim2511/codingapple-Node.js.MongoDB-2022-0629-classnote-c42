@@ -65,10 +65,8 @@
 
         <!-- 🦄c34 -->
         <h4>할일 제목 : <%= ig_posts %></h4>
-        <p>할일 마감날짜 : <%= ig_posts %></p>
-        
-        <h4>할일 제목 : <%= ig_posts[2].제목 %></h4>
-        <p>할일 마감날짜 : <%= ig_posts[2].날짜 %></p>
+        <p>할일 마감날짜 : <%= ig_posts %></p>    
+     
 
 
 
@@ -112,7 +110,7 @@
           //🍀44-50. e.target.dataset.id : 클릭한 버튼에 숨겨진 data-id값 가져오기
           data:{_id : e.target.dataset.id}    
         })
-        .done(function( msg결과 ) {
+        .done(function( msg결과 ) {                   //🥒c46-30)
           console.log('c44. delete-success')
           // 46)
           /* 
@@ -122,10 +120,11 @@
 
           // 46-20).parent('div').fadeOut();
           thisClicked.parent('div').fadeOut();
-        }).fail(function () {
+
+        }).fail(function (jqXHR, textStatus) {                  //🥒c46-40)
 
           console.log('c44, delete-fail')
-          
+          console.log( "Request failed: " + textStatus );   
         });
    })
 

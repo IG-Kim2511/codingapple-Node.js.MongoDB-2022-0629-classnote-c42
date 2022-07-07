@@ -154,9 +154,12 @@ MongoClient.connect(uri, function(에러, p_client){
         console.log('c44 delete Finished')
         
 
-        // c46. status(200).send({message : "c46, success"});
-        res응답.status(200).send({message : "c46, success"});
-
+        // c46-30) 성공코드 200:  res응답.status(200).send({message : "c46, success"});  
+        // 👉 list.ejs
+        res응답.status(200).send({message : "c46, fail"});
+        
+        // c46-40) 실패코드 400:  res응답.status(400).send({message : "c46, fail"});        
+        // res응답.status(400).send({message : "c46, fail"});
       });
       
     });
