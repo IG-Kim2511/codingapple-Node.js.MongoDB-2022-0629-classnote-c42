@@ -42,7 +42,7 @@ app.get('/write',(req요청,res응답)=>{       //2, 2-1)
 console.log('🦄🦄c30')
 
 // uri
-var uri = "mongodb+srv://iikim2522:mEX2TiWxbqKLQaFM@cluster0.qqllo.mongodb.net/?retryWrites=true&w=majority";
+var uri = "mongodb+srv://iikim2522:ebnB897IqLaSFdie@cluster0.qqllo.mongodb.net/?retryWrites=true&w=majority";
 
 // var db
 var db;   //c30-4)
