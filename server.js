@@ -163,7 +163,7 @@ MongoClient.connect(uri, function(에러, p_client){
     });
 
 
-    // 🦄🦄48 상세페이지를 만들어보자 (URL parameter), req요청.params.id .get('detailid작명', .findOne(~), .params.id작명, .parseInt(~)
+    // 🦄🦄48 상세페이지를 만들어보자 :id (URL parameter), req요청.params.id
     // 👉detail_c48.ejs
     /* 
         🍀목표: /detail로 접속하면 detail.ejs 보여주기 
@@ -176,7 +176,7 @@ MongoClient.connect(uri, function(에러, p_client){
         -6) parseInt() :  db의 id는 int인데, 코드를 확인하면 string으로 나옴 -> parseInt()붙여서 number로 만듬
         팁: 마우스를 hover하면 JavaScript type을 알려줌
 
-        -8).render('~c~',{ ~b~ : ~c~ }) : ~a~데이터를, ~b~이름으로,  ~c~~로 보냄,
+        -8).render('~c~',{ ~b~ : ~a~ }) : ~a~데이터를, ~b~이름으로,  ~c~~로 보냄,
     */
 
     // :id
@@ -189,7 +189,7 @@ MongoClient.connect(uri, function(에러, p_client){
 
         console.log(p_db결과)
         
-        // .render('~c~',{ ~b~ : ~c~ })
+        // .render('~c~',{ ~b~ : ~a~ })
         res응답.render('detail_c48.ejs',{ig_data : p_db결과 });
         
       })

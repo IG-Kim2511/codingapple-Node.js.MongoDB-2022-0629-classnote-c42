@@ -83,6 +83,7 @@
 
                 <!-- 44-40), 44-50) data-id="<%= ig_posts[i]._id %>-->
                 <button class="myBtn delete" data-id="<%= ig_posts[i]._id %>">삭제</button>
+                <button class="myBtn detail" data-id="<%= ig_posts[i]._id %>">detail page</button>
               </div>
             <%  }  %> 
         </div>
@@ -126,6 +127,11 @@
    })
 
 
+  //  
+
+  $('.detail').click(function (e) {
+    
+  });
 
     </script>
   </body>
