@@ -1,20 +1,19 @@
 
 /* 🍀 Server.js 상단 코드 */
 
-// c18
+// c18 express
 const express = require('express')
 const app = express()
 
-// c24-5)
+// c24-5) bodyParser
 const bodyParser= require('body-parser')
 app.use(bodyParser.urlencoded({extended: true})) 
 
-// c30)
+// c30) mongoDB
 const MongoClient = require('mongodb').MongoClient;
 
-// c32) 
+// c32) ejs
 app.set('view engine', 'ejs');
-
  
 // 🦄🦄 terminal 명령어 정리 👉 codingapple-Node.js.MongoDB-2022-0629-classnote폴더...server.js
 
