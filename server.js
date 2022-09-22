@@ -191,15 +191,8 @@ MongoClient.connect(uri, function(에러, p_client){
         // .render('~c~',{ ~b~ : ~a~ })
         res응답.render('detail_c48.ejs',{ig_data : p_db결과 });
         
-      })
-
-
-      
+      })      
     });
-
-
-
-
 
 
 
